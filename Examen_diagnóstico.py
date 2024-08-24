@@ -37,11 +37,13 @@ for alumno in alumnos:
         calificaciones_aprobadas.sort()
 
 print("\nMejor y menor calificación:")
+mejor_calificacion = calificaciones_aprobadas[len(calificaciones_aprobadas) - 1]
+menor_calificacion = calificaciones_aprobadas[0]
 for alumno in aprobados:
-    if (calificaciones_aprobadas[len(calificaciones_aprobadas) - 1] == aprobados[alumno]):
-        print(f"\t----- {alumno} tuvo la mejor calificación.")
-    elif (calificaciones_aprobadas[0] == aprobados[alumno]):
-        print(f"\t----- {alumno} tuvo la menor calificación.")
+    if (mejor_calificacion == aprobados[alumno]):
+        print(f"\t----- {alumno} tuvo la mejor calificación: {mejor_calificacion}")
+    elif (menor_calificacion == aprobados[alumno]):
+        print(f"\t----- {alumno} tuvo la menor calificación: {menor_calificacion}")
 
 
 
