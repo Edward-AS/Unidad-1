@@ -19,7 +19,7 @@ Algoritmo Examen_diagnostico
 	Definir nombre_alumno Como Cadena
 	Definir promedio, promedio_alumnos Como Real
 	
-	Escribir Sin Saltar "Ingrese el número de alumnos que desea promediar: "
+	Escribir Sin Saltar "Ingrese el nÃºmero de alumnos que desea promediar: "
 	Leer numero_alumnos
 	
 	Dimension nombre_alumnos[numero_alumnos]
@@ -34,7 +34,7 @@ Algoritmo Examen_diagnostico
 		Escribir "Las calificaciones deben de ser en el formato (0 - 100)"
 		
 		Para j Desde 0 Hasta 2 Hacer
-			Escribir Sin Saltar "Calificación ", j, " de ", nombre_alumno, ": "
+			Escribir Sin Saltar "CalificaciÃ³n ", j, " de ", nombre_alumno, ": "
 			Leer calificacion
 			calificaciones[j] <- calificacion
 		Fin Para
@@ -49,7 +49,7 @@ Algoritmo Examen_diagnostico
 	menor_calificacion = promedio_alumnos[0]
 	Para i Desde 0 Hasta numero_alumnos - 1 Con Paso 1 Hacer
 		Si promedio_alumnos[i] < 70 Entonces
-			Escribir "---> El alumno ", nombre_alumnos[i], " está reprobado..."
+			Escribir "---> El alumno ", nombre_alumnos[i], " estÃ¡ reprobado..."
 		Sino
 			Si menor_calificacion > promedio_alumnos[i] Y menor_calificacion >= 70 Entonces
 				menor_calificacion = promedio_alumnos[i]
@@ -57,7 +57,7 @@ Algoritmo Examen_diagnostico
 		Fin Si
 	Fin Para
 	
-	Escribir "Mejor y menor calificación:"
+	Escribir "Mejor y menor calificaciÃ³n:"
 	
 	mayor_calificacion = promedio_alumnos[0]
 	Para i Desde 0 Hasta numero_alumnos - 1 Con Paso 1 Hacer
@@ -68,11 +68,11 @@ Algoritmo Examen_diagnostico
 	
 	Para i Desde 0 Hasta numero_alumnos - 1 Con Paso 1 Hacer
 		Si mayor_calificacion == promedio_alumnos[i] Entonces
-			Escribir "----- ", nombre_alumnos[i], " tuvo la mejor calificación: ", mayor_calificacion
+			Escribir "----- ", nombre_alumnos[i], " tuvo la mejor calificaciÃ³n: ", mayor_calificacion
 		Fin Si
 		
 		Si menor_calificacion == promedio_alumnos[i] Entonces
-			Escribir "----- ", nombre_alumnos[i], " tuvo la menor calificación: ", menor_calificacion
+			Escribir "----- ", nombre_alumnos[i], " tuvo la menor calificaciÃ³n: ", menor_calificacion
 		Fin Si
 	Fin Para
 	
