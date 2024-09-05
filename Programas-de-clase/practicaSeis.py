@@ -8,7 +8,7 @@ class Calificaciones:
         self.c3 = 0
         self.n = ""
 
-    def prom(self): #Agregar aquí la tarea (debajo)
+    def prom(self):
         r = (self.c1 + self.c2 + self.c3) / 3
         r = round(r, 2)
         return r
